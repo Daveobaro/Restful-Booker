@@ -28,7 +28,7 @@ jobs:
 
       # Run the POSTMAN collection
       - name: Run API Tests
-        run: newman run "Restful Booker BVT.postman_collection.json" -e "Restful Booker Prod.postman_environment.json"
+        run: newman run "Restful Booker BVT.postman_collection.json" -e "Restful Booker Prod.postman_environment.json" --reporters htmlextra --reporter-htmlextra-export testResults/
 
       # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
